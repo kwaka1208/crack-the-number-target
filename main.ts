@@ -9,6 +9,7 @@ function 初期化 () {
     秘密の番号 = randint(1, 100)
     cracker = ""
     basic.showNumber(秘密の番号)
+    basic.pause(1000)
     basic.showIcon(IconNames.Yes)
 }
 input.onButtonPressed(Button.AB, function () {
