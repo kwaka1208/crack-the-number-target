@@ -24,5 +24,8 @@ function クラックされました () {
 let cracker = ""
 let 秘密の番号 = 0
 radio.setGroup(1)
-秘密の番号 = 2021
+秘密の番号 = randint(1, 100)
 cracker = ""
+basic.showNumber(秘密の番号)
+basic.pause(2000)
+basic.showIcon(IconNames.Yes)
