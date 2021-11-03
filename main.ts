@@ -5,6 +5,15 @@ input.onButtonPressed(Button.A, function () {
         クラックされました()
     }
 })
+function 初期化 () {
+    秘密の番号 = randint(1, 100)
+    cracker = ""
+    basic.pause(2000)
+    basic.showIcon(IconNames.Yes)
+}
+input.onButtonPressed(Button.AB, function () {
+    初期化()
+})
 radio.onReceivedValue(function (name, value) {
     if (cracker.isEmpty()) {
         if (秘密の番号 == value) {
@@ -21,11 +30,7 @@ radio.onReceivedValue(function (name, value) {
 function クラックされました () {
     basic.showString(cracker)
 }
-let cracker = ""
 let 秘密の番号 = 0
+let cracker = ""
 radio.setGroup(1)
-秘密の番号 = randint(1, 100)
-cracker = ""
-basic.showNumber(秘密の番号)
-basic.pause(2000)
-basic.showIcon(IconNames.Yes)
+初期化()
